@@ -1,0 +1,47 @@
+exercicio
+
+Inicialize a sua VM e clique no botão SSH para acessar a VM
+No shell da sua maquina virtual 
+sudo apt-get update -y
+
+instalar o cliene mysql no shell
+sudo apt-get install default-mysql-client -y
+
+
+conectar no mysql 
+mysql --host=MEU_IP_INTERNO  --user=root -p 
+
+
+create database departments;
+
+use departments;
+
+
+create table countries ( \
+country_id varchar(50) primary key not null, \
+country_name varchar(100) not null, \
+region_id int \
+);
+
+exit;
+
+
+Baixe os csv fornecidos na aula e faça o upload para o seu storage
+
+
+1 - No console do Google Cloud, acesse a página Instâncias do Cloud SQL.
+
+Acesse "Instâncias do Cloud SQL"
+
+2 - Para abrir a página Visão geral de uma instância, clique no nome da instância.
+3 - Clique em Importar.
+4 - Na seção Escolha o arquivo do qual você quer importar dados, insira o caminho para o bucket e o arquivo CSV para a importação. Ou acesse o arquivo:
+	a - Clique em Browse.
+	b - Na seção Local, clique duas vezes no nome do bucket na lista.
+	c - Selecione o arquivo na lista.
+	d - Clique em Selecionar.
+É possível importar um arquivo compactado (.gz) ou descompactado (.csv).
+
+5 - Na seção Formato, selecione CSV.
+6 - Especifique o Banco de dados e a Tabela na instância do Cloud SQL em que você quer importar o arquivo CSV.
+7 - Clique em Importar para iniciar a importação.
